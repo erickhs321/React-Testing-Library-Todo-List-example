@@ -18,14 +18,17 @@ const Todo = () => {
     <>
       <form onSubmit={handleFormSubmit}>
         <input
+          data-testid='form-field'
           onChange={handleInputChange}
-          placeholder="type a new task here"
-          type="text"
+          placeholder='type a new task here'
+          type='text'
           value={task}
         />
-        <button type="submit">Add new task</button>
+        <button data-testid='form-btn' type='submit'>
+          Add new task
+        </button>
       </form>
-      <table>
+      <table data-testid='table'>
         <thead>
           <tr>
             <th>Task</th>
